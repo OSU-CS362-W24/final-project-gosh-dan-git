@@ -25,7 +25,10 @@ describe('Invalid chart submission',  ()=> {
 		const errorPopup = document.querySelector('.error-popup')
 		const genChartButton = domTesting.getByText(document, 'Generate chart')
 		
+<<<<<<< HEAD
 		const { document } = window;
+=======
+>>>>>>> CICD-Integration
 
 		const user = userEvent.setup()
 		await user.click(genChartButton)
