@@ -16,5 +16,17 @@ describe('example to-do app', () => {
 
   })
 
+  it('Should take you to the scatter.html page', () => {
+    cy.get('a[href="scatter.html"]').click();
+    cy.url().should('include', '/scatter.html');
+
+  })
+
+  it('Should take you to the bar.html page', () => {
+    cy.get('a[href="bar.html"]').click();
+    cy.url().should('include', '/bar.html');
+
+  })
+
 
 })
