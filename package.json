@@ -5,7 +5,9 @@
   "scripts": {
     "build": "webpack",
     "start": "webpack serve --open",
-    "test": "jest"
+    "test": "jest",
+    "test:unit": "jest src/lib",
+    "test:integration": "jest src/bar src/line src/scatter"
   },
   "devDependencies": {
     "css-loader": "^6.7.4",
