@@ -8,21 +8,21 @@ describe('Line.html basic operations', () => {
     it('Should make a simple line chart', () => {
         cy.makeChart()
         cy.get('#save-chart-btn').click()
-        cy.get('a[href="./"]').click();
+        cy.get('a[href="./"]').click()
         cy.url().should('eq', 'http://localhost:8080/')
-        cy.get('.chart-card').should('have.length', 1);
+        cy.get('.chart-card').should('have.length', 1)
         cy.get('.chart-card').eq(0).click()
-        cy.url().should('include', '/line.html');
-        cy.get('#chart-title-input').should('have.value', 'My Chart');
-        cy.get('#chart-title-input').clear().type('My Line Chart');
+        cy.url().should('include', '/line.html')
+        cy.get('#chart-title-input').should('have.value', 'My Chart')
+        cy.get('#chart-title-input').clear().type('My Line Chart')
         cy.get('#add-values-btn').click()
         cy.get('.data-entry input').eq(6).type('5')
         cy.get('.data-entry input').eq(7).type('6')
         cy.get('#generate-chart-btn').click()
         cy.get('#save-chart-btn').click()
-        cy.get('a[href="./"]').click();
+        cy.get('a[href="./"]').click()
         cy.url().should('eq', 'http://localhost:8080/')
-        cy.get('.chart-card').should('have.length', 1);
+        cy.get('.chart-card').should('have.length', 1)
 
         
     })
@@ -30,7 +30,7 @@ describe('Line.html basic operations', () => {
     it('Should display error message if required fields are not filled', () => {
         cy.get('#generate-chart-btn').click()
         cy.on('window:alert', (message) => {
-        expect(message).to.equal('Error: No data specified!');
+        expect(message).to.equal('Error: No data specified!')
         });
     })
 
@@ -45,17 +45,17 @@ describe('Line.html basic operations', () => {
         cy.get('.data-entry input').eq(7).type('6')
         cy.get('#generate-chart-btn').click()
         cy.get('#save-chart-btn').click()
-        cy.get('a[href="./"]').click();
+        cy.get('a[href="./"]').click()
         cy.get('.chart-card').should('have.length', 2);
     })
 
     it('Should take you to the bar chart upon press', () => {
-        cy.get('a[href="bar.html"]').click();
+        cy.get('a[href="bar.html"]').click()
         cy.url().should('include', '/bar.html')
     })
 
     it('Should take you to the scatter chart upon press', () => {
-        cy.get('a[href="scatter.html"]').click();
+        cy.get('a[href="scatter.html"]').click()
         cy.url().should('include', '/scatter.html')
     })
 

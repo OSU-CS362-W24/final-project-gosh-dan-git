@@ -8,21 +8,21 @@ describe('Bar.html basic operations', () => {
     it('Should make a simple Bar chart', () => {
         cy.makeChart()
         cy.get('#save-chart-btn').click()
-        cy.get('a[href="./"]').click();
+        cy.get('a[href="./"]').click()
         cy.url().should('eq', 'http://localhost:8080/')
-        cy.get('.chart-card').should('have.length', 1);
+        cy.get('.chart-card').should('have.length', 1)
         cy.get('.chart-card').eq(0).click()
-        cy.url().should('include', '/bar.html');
-        cy.get('#chart-title-input').should('have.value', 'My Chart');
-        cy.get('#chart-title-input').clear().type('My bar Chart');
+        cy.url().should('include', '/bar.html')
+        cy.get('#chart-title-input').should('have.value', 'My Chart')
+        cy.get('#chart-title-input').clear().type('My bar Chart')
         cy.get('#add-values-btn').click()
         cy.get('.data-entry input').eq(6).type('5')
         cy.get('.data-entry input').eq(7).type('6')
         cy.get('#generate-chart-btn').click()
         cy.get('#save-chart-btn').click()
-        cy.get('a[href="./"]').click();
+        cy.get('a[href="./"]').click()
         cy.url().should('eq', 'http://localhost:8080/')
-        cy.get('.chart-card').should('have.length', 1);
+        cy.get('.chart-card').should('have.length', 1)
 
         
     })
