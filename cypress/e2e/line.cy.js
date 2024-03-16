@@ -14,7 +14,7 @@ describe('Line.html basic operations', () => {
         cy.get('.chart-card').eq(0).click()
         cy.url().should('include', '/line.html');
         cy.get('#chart-title-input').should('have.value', 'My Chart');
-        cy.get('#chart-title-input').type('My Line Chart');
+        cy.get('#chart-title-input').clear().type('My Line Chart');
         cy.get('#add-values-btn').click()
         cy.get('.data-entry input').eq(6).type('5')
         cy.get('.data-entry input').eq(7).type('6')
