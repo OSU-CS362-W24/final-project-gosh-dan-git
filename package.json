@@ -11,7 +11,7 @@
     "test:integration": "jest src/line",
     "cy:open": "cypress open",
     "cy:run": "cypress run",
-    "test:e2e": "start-test gallery http://localhost:8080 cy:run",
+    "test:e2e": "npx cy:run",
     "buildSH": "./build.sh"
   },
   "devDependencies": {
