@@ -6,4 +6,4 @@
 
 mkdir build/
 rm -rf build/*
-cp -r index/*.html index/*.css gallery/*.js index/goshDanGit_build/
+cp -r todos/*.html todos/*.css todos/*.js todos/fontawesome build/
