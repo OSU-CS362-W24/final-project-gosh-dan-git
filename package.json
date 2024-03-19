@@ -10,9 +10,8 @@
     "test:unit": "jest src/lib",
     "test:integration": "jest src/line",
     "cy:open": "cypress open",
-    "cy:run": "cypress run",
-    "test:e2e": "npx cypress run",
-    "buildSH": "./build.sh"
+    "test:e2e": "start-server-and-test start http://localhost:8080 cy:run",
+    "cy:run": "cypress run"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.4.2",
