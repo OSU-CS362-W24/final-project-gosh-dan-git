@@ -5,12 +5,13 @@
   "scripts": {
     "build": "webpack",
     "start": "webpack serve --open",
+    "gallery":"serve gallery -p 8080",
     "test": "jest",
     "test:unit": "jest src/lib",
     "test:integration": "jest src/line",
     "cy:open": "cypress open",
     "cy:run": "cypress run",
-    "test:e2e": "start-test start http://localhost:8080 cy:run"
+    "test:e2e": "start-test gallery http://localhost:8080 cy:run"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.4.2",
