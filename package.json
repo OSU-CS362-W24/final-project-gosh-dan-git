@@ -7,7 +7,10 @@
     "start": "webpack serve --open",
     "test": "jest",
     "test:unit": "jest src/lib",
-    "test:integration": "jest src/bar src/line src/scatter"
+    "test:integration": "jest src/line",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "test:e2e": "start-test start http://localhost:8080 cy:run"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.4.2",
@@ -27,5 +30,9 @@
     "moduleNameMapper": {
       "\\.css$": "<rootDir>/src/__mocks__/styleMock.js"
     }
+  },
+  "dependencies": {
+    "jest": "^29.7.0",
+    "save-dev": "^0.0.1-security"
   }
 }
