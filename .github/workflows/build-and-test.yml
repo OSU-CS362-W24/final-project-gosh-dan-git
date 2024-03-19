@@ -13,7 +13,4 @@ jobs:
       - run: npm run build
       - run: npm run test:unit
       - run: npm run test:integration
-      - name: Cypress run
-        uses: cypress-io/github-action@v2
-        with:
-          working-directory: ../cypress/e2e      
+      - run: npm run test:e2e

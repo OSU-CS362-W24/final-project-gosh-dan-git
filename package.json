@@ -4,8 +4,7 @@
   "description": "CS 362 Final Project",
   "scripts": {
     "build": "webpack",
-    "start": "webpack serve --open",
-    "gallery": "serve gallery -p 8080",
+    "start": "webpack serve --open -p 8080",
     "test": "jest",
     "test:unit": "jest src/lib",
     "test:integration": "jest src/line",
