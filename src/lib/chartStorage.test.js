@@ -1,3 +1,7 @@
+/**
+ * @jest-environment jsdom
+ */
+
 const chartStorage = require('../lib/chartStorage')
 
 

@@ -1,3 +1,7 @@
+/**
+ * @jest-environment jsdom
+ */
+
 const sortPoints = require('../lib/sortPoints')
 
 
