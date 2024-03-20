@@ -46,6 +46,7 @@
     "p-map": "^7.0.1",
     "save-dev": "^0.0.1-security",
     "tweetnacl": "^0.14.5",
-    "verror": "^1.10.0"
+    "verror": "^1.10.0",
+    "whatwg-fetch": "^3.6.20"
   }
 }
